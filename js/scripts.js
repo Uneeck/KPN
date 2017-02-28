@@ -104,6 +104,16 @@ function checkRoundWinner(playerPick, computerPick) {
         computer.score++;
     }
 
+    setGamePoints();
+
+    if(player.score > 9 || computer.score > 9){
+        finishGame();
+    }
+
+}
+
+function finishGame() {
+    return;
 }
 
 function playerPick(playerPick) {
