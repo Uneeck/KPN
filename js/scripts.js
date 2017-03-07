@@ -103,8 +103,20 @@ function checkRoundWinner(playerPick, computerPick) {
         computerResultElem.innerHTML = "Wygrana!";
         computer.score++;
     }
+    setGamePoints();
 
+    if (player.score > 9 || computer.score > 9){
+    	if(player.score > computer.score){
+    		alert(player.name + ', WYGRYWASZ! BRAWO!');
+    	} else {
+    	alert('WYGRYWA KOMPUTER...');
+    }
+    	gameState = 'ended';
+    	setGameElements();
+    }
 }
+
+
 
 function playerPick(playerPick) {
     var computerPick = getComputerPick();
